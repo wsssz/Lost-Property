@@ -30,8 +30,8 @@ else{
   $type = $_POST['atype'];
   $addate = $_POST['addate'];
   $where = empty($_POST['wherelost']) ? null : $_POST['wherelost'];
-  $date1 = $_POST['Date1'];
-  $date2 = $_POST['Date2'];
+  $date1 = $addate == 'Y' ? $_POST['Date1'] : null;
+  $date2 = $addate == 'Y' ? $_POST['Date2'] : null;
   $text = $_POST['information'];
   //get file if uploaded
   if (!empty($_FILES['file']['tmp_name'])) {
